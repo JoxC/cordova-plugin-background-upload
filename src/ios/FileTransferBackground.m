@@ -41,6 +41,7 @@ NSString *const FormatTypeName[5] = {
     
     pluginCommand = command;
     
+    [[FileUploadManager sharedInstance] stop];
     [FileUploadManager sharedInstance].delegate = self;
     [[FileUploadManager sharedInstance] start];
     
